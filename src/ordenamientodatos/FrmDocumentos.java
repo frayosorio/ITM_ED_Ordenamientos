@@ -144,9 +144,10 @@ public class FrmDocumentos extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         Util.iniciarCronometro();
-        ArbolBinario ab = Documento.obtenerArbolBinario();
-        ab.setCriterio(cmbCriterio.getSelectedIndex());
+        ArbolBinario ab = Documento.obtenerArbolBinario(cmbCriterio.getSelectedIndex());
         txtTiempo.setText(Util.getTextoTiempoCronometro());
+        
+        ab.mostrar(tblDocumentos);
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
